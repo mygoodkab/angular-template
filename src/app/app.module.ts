@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,6 +53,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     FooterComponent,
   ],
   imports: [
+    HttpClientModule,
+    JsonpModule,
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,

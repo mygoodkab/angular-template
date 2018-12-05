@@ -10,6 +10,9 @@ import { CategoryComponent } from './category/category.component';
     CommonModule,
     LandingPageRoutingModule
   ],
+  providers: [
+    // RxSpeechRecognitionService,
+  ],
   declarations: [HomeComponent, CategoryComponent]
 })
 export class LandingPageModule { }

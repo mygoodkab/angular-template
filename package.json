@@ -22,8 +22,12 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@kamiazya/ngx-speech-recognition": "^0.2.0",
     "core-js": "^2.5.4",
+    "fs": "0.0.1-security",
     "hammerjs": "^2.0.8",
+    "jwt-decode": "^2.2.0",
+    "recordrtc": "^5.4.8",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

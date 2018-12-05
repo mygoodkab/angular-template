@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<div  style="padding-top:20%; text-align: center;">
+    <div style="margin-bottom:5%;">
+        {{message}}
+    </div>
+    <div style="color:white;">
+        <a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording">
+            <i class="material-icons">
+                settings_voice
+            </i>
+        </a>
+        <a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording">
+            <i class="material-icons">
+                settings_voice
+            </i>
+        </a>
+    </div>
+</div>
