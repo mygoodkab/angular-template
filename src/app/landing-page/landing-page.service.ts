@@ -20,4 +20,12 @@ export class LandingPageService {
   postTextToSpeech(payload) {
     return this.appService.postWithAuthen('speech/audio', payload);
   }
+
+  getWakeup() {
+    return this.appService.getWithAuthen('wakeup/database', []);
+  }
+
+  sleep() {
+    return this.appService.getWithAuthen('wakeup/sleep', []);
+  }
 }

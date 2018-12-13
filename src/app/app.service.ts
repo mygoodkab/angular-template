@@ -10,6 +10,7 @@ export class AppService {
   ) { }
 
   baseURL = 'http://35.240.195.26:3000';
+  
   cbase(url, arr) {
     let entry;
     let i;

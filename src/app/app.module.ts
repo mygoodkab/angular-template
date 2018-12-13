@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatDatepickerModule,
   MatAutocompleteModule,
@@ -45,6 +46,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +55,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     FooterComponent,
   ],
   imports: [
+
     HttpClientModule,
     JsonpModule,
     BrowserAnimationsModule,
