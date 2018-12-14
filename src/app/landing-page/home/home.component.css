@@ -1,7 +1,12 @@
 .sleep {
     background-color: black;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .wakeup {
-    background-color: white;
+    background-color: rgb(214, 214, 214);
+    z-index: -3;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }

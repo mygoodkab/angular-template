@@ -38,9 +38,9 @@ export class HomeComponent implements OnInit {
     // });
   }
 
-  @HostListener('click') onMouseClick() {
-    this.monitorStatus(this.wakeup);
-  }
+  // @HostListener('click') onMouseClick() {
+  //   this.monitorStatus(this.wakeup);
+  // }
 
 
   async ngOnInit() {
@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
      * Stop recording.
      */
   async stopRecording() {
-    this.recording = false;
+
     this.message = 'proessing . . .';
     this.record.stop(this.processRecording.bind(this));
   }
@@ -118,6 +118,7 @@ export class HomeComponent implements OnInit {
       }
 
       setTimeout(() => {
+        this.recording = false;
         this.wakeup = false;
         this.ladingPageService.sleep();
       }, 3000);
@@ -146,7 +147,9 @@ export class HomeComponent implements OnInit {
     this.intervalCall = setInterval(async () => {
       const res: any = await this.ladingPageService.getWakeup();
       if (res.data) {
-        this.wakeup = res.data;
+        if (!this.recording) {
+          this.initiateRecording();
+        }
       }
 
     }, 1500);
